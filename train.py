@@ -14,6 +14,7 @@ np.random.seed(hps.seed)
 torch.manual_seed(hps.seed)
 torch.cuda.manual_seed(hps.seed)
 
+np.seterr(all="ignore")
 
 def prepare_dataloaders(fdir, n_gpu):
     trainset = ljdataset(fdir)
